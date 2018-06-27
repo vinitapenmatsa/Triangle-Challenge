@@ -1,5 +1,5 @@
 # Triangle Challenge
-Take home challenge to determine the type of triangle. (EQUILATERAL / ISOSCELES / SCALENE )
+Take at home challenge to determine the type of a triangle. (EQUILATERAL / ISOSCELES / SCALENE )
 
 [Instructions](#instructions)<br>
 [Implementation Details](#implementation-details)<br>
@@ -22,19 +22,13 @@ Take home challenge to determine the type of triangle. (EQUILATERAL / ISOSCELES 
 
 I have used Java + Spring boot to implement the solution simply because spring boot is easy to setup and offers a wide variety of features for building services and web applications.<br>
 
-Application Exposes 2 APIs<br>
+Application Exposes The Following API<br>
 - getTriangleType :<br>
   takes an array of doubles and returns <br>
       - EQUILATRAL / ISOCELES / SCALENE based on sides.<br>
-      - INVALID if the given triangle does not satify properties of a triangle<br>
-      - Unsupported Shape Exception if size of sides array > 3.<br>
-      
-- isValidTriangle<br>
-  takes an array of doubles and returns <br>
-      - true if valid triangle<br>
-      - false if not.<br>
-      - Unsupported Shape Exception if size of sides array > 3.<br>
-      
+      - INVALID TRIANGLE if the given triangle does not satify properties of a triangle<br>
+      - Shape Not Supported if size of sides array > 3.<br>
+
 If needed the solution can be easily extended to any shape by
  - Implementing the shape interface if any shape other than a polygon Eg: circle , ellipse etc.<br>
  - Extending the Polygon Abstract class for any other n-sided polygon Eg: square , hexagon etc.<br>
