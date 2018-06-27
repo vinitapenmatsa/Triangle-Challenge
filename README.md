@@ -20,7 +20,8 @@ Take home challenge to determine the type of triangle. (EQUILATERAL / ISOSCELES 
 
 # Implementation Details
 
-using Java + Spring boot to implement this challenge.
+using Java + Spring boot to implement this challenge simply because spring boot is easy to setup and offers a wide variety of features for building services.
+
 
 
 
