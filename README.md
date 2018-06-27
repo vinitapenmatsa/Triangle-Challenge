@@ -12,7 +12,7 @@ Take home challenge to determine the type of triangle. (EQUILATERAL / ISOSCELES 
 2. mvn clean install - to generate target resources.<br>
 3. mvn spring-boot:run (default port 8000 - optionally specify your own port with : -Dserver.port=YOUR_PORT_NUMBER ).<br>
    <b>Note</b> : you can also run this as a java application using : java -jar target/Triangle-Challenge-0.0.1-SNAPSHOT.jar.
-4. Once Application is up and running , you can access the API end points using you localhost and port number.
+4. Once Application is up and running , you can access the API end points using swagger UI on your localhost and port number.
    Example : http://localhost:8000/swagger-ui.html  ( change port number if required )
 5. Test API Results.
 6. Included Jacoco dependency for test coverage reports.
@@ -20,7 +20,7 @@ Take home challenge to determine the type of triangle. (EQUILATERAL / ISOSCELES 
 
 # Implementation Details
 
-using Java + Spring boot to implement this challenge simply because spring boot is easy to setup and offers a wide variety of features for building services and web applications.<br>
+I have used Java + Spring boot to implement the solution simply because spring boot is easy to setup and offers a wide variety of features for building services and web applications.<br>
 
 Application Exposes 2 APIs<br>
 - getTriangleType :<br>
@@ -43,7 +43,7 @@ If needed the solution can be easily extended to any shape by
  - ShapeFactory can be modified to support other shapes.<br>
  - PolygonFactory can be modified to support other polygons.<br>
  
- For the sake of keeping it simple  , the following concepts have been considered out of scope.
+ For the sake of keeping it simple , the following concepts have been considered out of scope.
  1. Rest API authentication
  2. Degenerate Triangles
 
