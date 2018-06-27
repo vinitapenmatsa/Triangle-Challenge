@@ -49,5 +49,7 @@ If needed the solution can be easily extended to any shape by
 
 # Test Results
 
-Application includes jaCoCo dependency. After running mvm clean install , test coverage reports can be seen using /target/site/jacoco/index.html
+Application includes jaCoCo dependency. After running mvm clean install , test coverage reports can be seen using /target/site/jacoco/index.html. Also including a screenshot of local test coverage results.
+
+![image](https://user-images.githubusercontent.com/40624041/41991600-9c8f1b14-7a63-11e8-9919-7c7e695fdf58.png)
 
