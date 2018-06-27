@@ -26,13 +26,14 @@ Application Exposes 2 APIs<br>
 - getTriangleType :<br>
   takes an array of doubles and returns <br>
       - EQUILATRAL / ISOCELES / SCALENE based on sides.<br>
-      - INVALID if the given triangle does not satifies properties of a triangle<br>
+      - INVALID if the given triangle does not satify properties of a triangle<br>
       - Unsupported Shape Exception if size of sides array > 3.<br>
       
 - isValidTriangle<br>
   takes an array of doubles and returns <br>
       - true if valid triangle<br>
       - false if not.<br>
+      - Unsupported Shape Exception if size of sides array > 3.<br>
       
 If needed the solution can be easily extended to any shape by
  - Implementing the shape interface if any shape other than a polygon Eg: circle , ellipse etc.<br>
