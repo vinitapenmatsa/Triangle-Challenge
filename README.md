@@ -43,13 +43,11 @@ If needed the solution can be easily extended to any shape by
  - ShapeFactory can be modified to support other shapes.<br>
  - PolygonFactory can be modified to support other polygons.<br>
  
-  
-
-
- 
-
-
-
+ For the sake of keeping it simple  , the following concepts have been considered out of scope.
+ 1. Rest API authentication
+ 2. Degenerate Triangles
 
 # Test Results
+
+Application includes jaCoCo dependency. After running mvm clean install , test coverage reports can be seen using /target/site/jacoco/index.html
 
