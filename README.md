@@ -24,7 +24,7 @@ I have used Java + Spring boot to implement the solution simply because spring b
 
 Application Exposes The Following API<br>
 - getTriangleType :<br>
-  takes an array of doubles and returns <br>
+  takes an array of <b>doubles</b> and returns <br>
       - EQUILATRAL / ISOCELES / SCALENE based on sides.<br>
       - INVALID TRIANGLE if the given triangle does not satify properties of a triangle<br>
       - Shape Not Supported if size of sides array > 3.<br>
