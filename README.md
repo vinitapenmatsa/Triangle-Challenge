@@ -15,8 +15,8 @@ Take home challenge to determine the type of triangle. (EQUILATERAL / ISOSCELES 
 4. Once Application is up and running , you can access the API end points using you localhost and port number.
    Example : http://localhost:8000/swagger-ui.html  ( change port number if required )
 5. Test API Results.
-6. Included Jacoco dependency if you want to check code coverage metrics.
-7. Also Included a Bash script to test rest end points , you can use that to run as bash script if required.
+6. Included Jacoco dependency for test coverage reports.
+7. Also Included a Bash script to test REST end points, if needed to run as a bash script.
 
 # Implementation Details
 
