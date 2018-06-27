@@ -10,7 +10,7 @@ Take home challenge to determine the type of triangle. (EQUILATERAL / ISOSCELES 
 
 1. Git clone the repository.
 2. mvn clean install - to generate target resources.
-3. mvn spring-boot:run ( optionally specify your own port with : -Dserver.port=YOUR_PORT_NUMBER ).<br>
+3. mvn spring-boot:run (default port 8000 - optionally specify your own port with : -Dserver.port=YOUR_PORT_NUMBER ).<br>
    <b>Note</b> : you can also run this as a java application using : java -jar target/Triangle-Challenge-0.0.1-SNAPSHOT.jar.
 4. Once Application is up and running , you can access the API end points using you localhost and port number.
    Example : http://localhost:8000/swagger-ui.html  ( change port number if required )
