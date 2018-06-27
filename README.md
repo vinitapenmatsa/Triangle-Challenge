@@ -20,5 +20,7 @@ Take home challenge to determine the type of triangle. (EQUILATERAL / ISOSCELES 
 
 # Implementation Details
 
+Using Java + Spring boot to implement this challenge 
+
 # Test Results
 
