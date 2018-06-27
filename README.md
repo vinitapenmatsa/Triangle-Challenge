@@ -20,7 +20,31 @@ Take home challenge to determine the type of triangle. (EQUILATERAL / ISOSCELES 
 
 # Implementation Details
 
-using Java + Spring boot to implement this challenge simply because spring boot is easy to setup and offers a wide variety of features for building services.
+using Java + Spring boot to implement this challenge simply because spring boot is easy to setup and offers a wide variety of features for building services and web applications.
+
+Application Exposes 2 APIs
+- getTriangleType :
+  takes an array of doubles and returns 
+      EQUILATRAL / ISOCELES / SCALENE based on sides.
+      INVALID if the given triangle does not satifies properties of a triangle
+      Unsupported Shape Exception if size of sides array > 3.
+      
+-isValidTriangle
+  takes an array of doubles and returns 
+      true if valid triangle
+      false if not.
+      
+If needed the solution can be easily extended to any shape by
+ - Implementing the shape interface if any shape other than a polygn Eg: circle , ellipse etc.
+ - Extending the Polygon Abstract class for any n-sided polygon Eg: square hexagon etc.
+ 
+ ShapeFactory can be modified to support other shapes.
+ PolygonFactory can be modified to support other polygons.
+ 
+  
+
+
+ 
 
 
 
