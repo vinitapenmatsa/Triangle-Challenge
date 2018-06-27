@@ -35,11 +35,12 @@ Application Exposes 2 APIs<br>
       - false if not.<br>
       
 If needed the solution can be easily extended to any shape by
- - Implementing the shape interface if any shape other than a polygn Eg: circle , ellipse etc.
- - Extending the Polygon Abstract class for any n-sided polygon Eg: square hexagon etc.
+ - Implementing the shape interface if any shape other than a polygon Eg: circle , ellipse etc.<br>
+ - Extending the Polygon Abstract class for any other n-sided polygon Eg: square , hexagon etc.<br>
+      * Certain common functions have been included in polygon abstract class Eg : getNumberOfSides , isEquilateral etc. More functions like isCyclic , isRectilinear can be added if required.
  
- ShapeFactory can be modified to support other shapes.
- PolygonFactory can be modified to support other polygons.
+ - ShapeFactory can be modified to support other shapes.<br>
+ - PolygonFactory can be modified to support other polygons.<br>
  
   
 
