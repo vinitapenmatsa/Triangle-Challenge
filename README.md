@@ -2,7 +2,7 @@
 Take home challenge to determine the type of triangle. (EQUILATERAL / ISOSCELES / SCALENE )
 
 [Instructions](#instructions)<br>
-[Implementation Details](#impelementation-details)<br>
+[Implementation Details](#implementation-details)<br>
 [Tests Results / Code Coverage](#test-results)<br>
 
 
@@ -18,7 +18,7 @@ Take home challenge to determine the type of triangle. (EQUILATERAL / ISOSCELES 
 6. Included Jacoco dependency if you want to check code coverage metrics.
 7. Also Included a Bash script to rest end points , you can use that to run as bash script if required.
 
-# Impelementation Details
+# Implementation Details
 
 # Test Results
 
