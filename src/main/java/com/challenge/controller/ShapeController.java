@@ -37,11 +37,4 @@ public class ShapeController {
 	   return shapeService.getPolygonType(polygonDTO);
 	}
 	
-	@RequestMapping(path = "/triangle/isValid" , method = RequestMethod.GET )
-	@ResponseStatus(HttpStatus.OK)
-	@ResponseBody
-	public Boolean isValidTriangle(PolygonDTO polygonDTO){
-		return shapeService.isValidPolygon(polygonDTO);		
-	}	
-	
 }

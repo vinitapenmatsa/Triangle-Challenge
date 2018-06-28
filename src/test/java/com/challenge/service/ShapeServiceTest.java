@@ -9,6 +9,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.challenge.dto.PolygonDTO;
+import com.challenge.exception.InvalidTriangleException;
 import com.challenge.model.Shape;
 import com.challenge.model.Triangle;
 import com.challenge.model.factory.ShapeFactory;
@@ -26,42 +27,32 @@ public class ShapeServiceTest {
 	@MockBean
 	ShapeFactory shapeFactory;
 	
-	Shape shape1, shape2;
+	Shape shape;
 	PolygonDTO polygonDTO;
 	
 	@Before
 	public void setUp() {
-	   shape1 = new Triangle(new double[] {3,4,5});
-	   shape2 = new Triangle(new double[] {3,2,5});
+	   shape = new Triangle(new double[] {3,4,5});
 	   
 	   polygonDTO = new PolygonDTO();
 	   polygonDTO.setSides(new double[] {2,2,2});
 	   
-	   when(shapeFactory.getShape(any(double[].class))).thenReturn(shape1, shape2,shape1,shape2);
 	}
 	
 	@Test
-	public void testGetPolygonType() {
+	public void testGetPolygonTypeForValidTriangle() {
 		//testing for a triangle type
+		when(shapeFactory.getShape(any(double[].class))).thenReturn(shape);
 		String resultForScaleneTriangle = shapeService.getPolygonType(polygonDTO);
-		assertEquals("SCALENE", resultForScaleneTriangle);
-		
-		//testing for an invalid triangle
-		String resultForInvalidTriangle = shapeService.getPolygonType(polygonDTO);
-		assertEquals("INVALID", resultForInvalidTriangle);
-		
+		assertEquals("SCALENE", resultForScaleneTriangle);		
 	}
 	
-	@Test
-	public void testIsValidPolygon() {
-		//testing for a valid polygon
-		boolean resultForValidPolygon = shapeService.isValidPolygon(polygonDTO);
-		assertEquals(true, resultForValidPolygon);
-		
-		//testing for an invalid polygon
-		boolean resultForInValidPolygon = shapeService.isValidPolygon(polygonDTO);
-		assertEquals(false, resultForInValidPolygon);
-		
-	}
+	@Test(expected=InvalidTriangleException.class)
+	public void testGetPolygonTypeForInValidTriangle() {
+		//testing for an invalid triangle
+		when(shapeFactory.getShape(any(double[].class))).thenThrow(InvalidTriangleException.class);
+		shapeService.getPolygonType(polygonDTO);
 
+	}
+	
 }

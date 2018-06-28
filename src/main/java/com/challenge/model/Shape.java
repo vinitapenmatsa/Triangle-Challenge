@@ -1,14 +1,23 @@
 package com.challenge.model;
 
 /**
- *  Interface for any shape.
+ *  Interface to represent any shape.
  * 
  * @author vinitapenmatsa
  */
 public interface Shape {
 	
+	
+	/**
+	 * validates a given shape by its properties.
+	 * @return
+	 */
 	public boolean isValid();
 	
+	/**
+	 * Returns a classification for Shape.
+	 * @return 
+	 */
 	public String getType();
 
 }

@@ -1,38 +1,48 @@
 package com.challenge.model;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import com.challenge.exception.InvalidTriangleException;
 import com.challenge.model.Triangle.TriangleType;
 
 public class TriangleTest {
 	
-	@Test
-	public void invalidTriangleTest() {
+	@Test(expected=InvalidTriangleException.class)
+	public void invalidTriangleWithNoSidesTest() {
 		//Test for no sides
-		Triangle triangle1 = new Triangle(new double[] {});
-		assertFalse(triangle1.isValid());
-		
+		new Triangle(new double[] {});
+	}
+	
+	@Test(expected=InvalidTriangleException.class)
+	public void invalidTriangleWithTooManySidesTest() {
 		// Test for invalid number of sides
-		Triangle triangle2 = new Triangle(new double[] {2,2,3,4});
-		assertFalse(triangle2.isValid());
-		
+        new Triangle(new double[] {2,2,3,4});
+	}
+	
+	@Test(expected=InvalidTriangleException.class)
+	public void invalidTriangleWrongLengths1() {
 		//Test for sides that do not satisfy triangle length property
 		//test sum of 1st and 2nd not greater than 3rd
-		Triangle triangle3 = new Triangle(new double[] {2.4,3.5,5.9});
-		assertFalse(triangle3.isValid());
-		
-		//test sum of 1st and 3rd not greater than 2nd
-		Triangle triangle4 = new Triangle(new double[] {2.4,5.9,3.5});
-		assertFalse(triangle4.isValid());
-		
-		//test sum of 3rd and 2nd not greater than 1st
-		Triangle triangle5 = new Triangle(new double[] {5.9,3.5,2.4});
-		assertFalse(triangle5.isValid());
+		new Triangle(new double[] {2.4,3.5,5.9});
 	}
+
+	@Test(expected=InvalidTriangleException.class)
+	public void invalidTriangleWrongLengths2() {
+		//Test for sides that do not satisfy triangle length property
+		//test sum of 1st and 2nd not greater than 3rd
+		new Triangle(new double[] {2.4,5.9,3.5});
+	}
+	
+	@Test(expected=InvalidTriangleException.class)
+	public void invalidTriangleWrongLengths3() {
+		//Test for sides that do not satisfy triangle length property
+		//test sum of 1st and 2nd not greater than 3rd
+		new Triangle(new double[] {5.9,3.5,2.4});
+	}
+		
 	
 	@Test
 	public void validTriangleTest() {

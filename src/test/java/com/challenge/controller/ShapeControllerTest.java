@@ -31,20 +31,6 @@ public class ShapeControllerTest {
 	@MockBean
 	private ShapeService shapeService;
 	
-
-	@Test
-	public void isValidTest() throws Exception{
-		//test get triangle isValid end point
-		when(shapeService.isValidPolygon(any(PolygonDTO.class))).thenReturn(true);
-		
-		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/api/shape/triangle/isValid?sides=2&sides=2&sides=2");
-		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
-		
-		assertEquals("true", result.getResponse().getContentAsString());
-		
-				
-	}
-
 	@Test
 	public void getTriangleTypeTest() throws Exception{
 		//test get triangle type end point

@@ -28,15 +28,4 @@ public class ShapeService {
 		return shape.getType();	
 	}
 
-	/**
-	 * Checks if the given inputs form a valid polygon
-	 * @param polygonDTO
-	 * @return
-	 */
-	public boolean isValidPolygon(PolygonDTO polygonDTO){
-		  double[] sides = polygonDTO.getSides();
-		  Shape shape = shapeFactory.getShape(sides);
-		  return shape.isValid();
-	}
-
 }

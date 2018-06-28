@@ -1,5 +1,6 @@
 package com.challenge.model;
 
+import com.challenge.exception.InvalidTriangleException;
 
 /**
  *  Triangle implementation of Shape Interface.
@@ -11,10 +12,12 @@ package com.challenge.model;
  */
 public class Triangle extends Polygon {
 
-	public enum TriangleType{ EQUILATERAL , ISOSCELES , SCALENE , INVALID};
+	public enum TriangleType{ EQUILATERAL , ISOSCELES , SCALENE };
 
 	public Triangle(double[] sides) {
 		super(sides);
+		if(!isValid())
+			throw new InvalidTriangleException();
 	}
 
 	/**
@@ -46,15 +49,11 @@ public class Triangle extends Polygon {
 	@Override
 	public String getType() {
 		
-		if(isValid()) {
 			if(isEquilateral())
 				return TriangleType.EQUILATERAL.toString();
 			else if((sides[0] == sides[1]) || (sides[1] == sides[2]) || (sides[2] == sides[0]))
 				return TriangleType.ISOSCELES.toString();
 
 			return TriangleType.SCALENE.toString();
-		}else {
-			return TriangleType.INVALID.toString();
-		}
 	}
 }
