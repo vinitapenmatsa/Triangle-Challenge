@@ -1,5 +1,5 @@
 # Triangle Challenge
-Take at home challenge to determine the type of a triangle. (EQUILATERAL / ISOSCELES / SCALENE )
+Take home challenge to determine the type of a triangle. (EQUILATERAL / ISOSCELES / SCALENE )
 
 [Instructions](#instructions)<br>
 [Implementation Details](#implementation-details)<br>
@@ -28,11 +28,13 @@ Application Exposes The Following API<br>
       - EQUILATRAL / ISOCELES / SCALENE based on sides.<br>
       - INVALID TRIANGLE if the given triangle does not satify properties of a triangle<br>
       - Shape Not Supported if size of sides array > 3.<br>
+      
+Class Hierarchy - SHAPE (Interface) ------------> POLYGON ( Abstract class ) -----------> TRIANGLE ( Concrete Class)
 
-If needed the solution can be easily extended to any shape by
- - Implementing the shape interface if any shape other than a polygon Eg: circle , ellipse etc.<br>
+If needed the solution can be easily extended to other shapes by:
+ - Implementing the shape interface for shapes other than a polygon Eg: circle , ellipse etc.<br>
  - Extending the Polygon Abstract class for any other n-sided polygon Eg: square , hexagon etc.<br>
-      * Certain common functions have been included in polygon abstract class Eg : getNumberOfSides , isEquilateral etc. More functions like isCyclic , isRectilinear can be added if required.
+      * Certain common functions have been included in polygon abstract class Eg : getNumberOfSides , isEquilateral etc. More polygon functions like isCyclic , isRectilinear can be added if required.
  
  - ShapeFactory can be modified to support other shapes.<br>
  - PolygonFactory can be modified to support other polygons.<br>
