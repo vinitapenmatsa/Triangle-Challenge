@@ -1,5 +1,6 @@
-# Triangle Challenge
+# Triangle Challenge  
 Take home challenge to determine the type of a triangle. (EQUILATERAL / ISOSCELES / SCALENE )
+https://vinitapenmatsa.github.io/Triangle-Challenge/
 
 [Instructions](#instructions)<br>
 [Implementation Details](#implementation-details)<br>
